@@ -1,5 +1,5 @@
-Require Import ZArith.
-Require Import Lia.
+From Coq Require Import ZArith.
+From Coq Require Import Lia.
 Open Scope Z.
 
 (* The goal of this file is to establish that Z can be seen
@@ -19,11 +19,11 @@ Proof.
     intros P P0 P1 Pm1 recpos recneg z.
     destruct z.
     - exact P0.
-    - pose proof (Pos.peano_rec (restrictionPositive P) P1).
+    - pose proof (Pos.peano_rec (restrictionPositive P) P1) as H.
       unfold restrictionPositive in H. 
       apply H. intros p' hyp. rewrite Pos2Z.inj_succ.
       apply recpos, hyp.
-    - pose proof (Pos.peano_rec (restrictionNegative P) Pm1).
+    - pose proof (Pos.peano_rec (restrictionNegative P) Pm1) as H.
       unfold restrictionNegative in H.
       apply H. intros p' hyp. replace (Z.neg (Pos.succ p')) with (Z.pred (Z.neg p')) by lia.
       apply recneg, hyp.
