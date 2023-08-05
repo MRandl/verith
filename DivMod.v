@@ -1,5 +1,5 @@
 From Coq Require Import ZArith.
-Require Import Lia. (* dieu merci que lia existe *)
+From Coq Require Import Lia. (* dieu merci que lia existe *)
 Require Import ZInduction.
 Open Scope Z.
 
@@ -16,11 +16,11 @@ Qed.
 Lemma divides_smaller : forall a b, b > 0 -> (b | a) -> (-b < a < b) -> a = 0.
 Proof.
     intros a b bpos b_div_a a_bound.
-    destruct b_div_a.
+    destruct b_div_a as [x x_div_a].
     destruct x.
     - lia.
-    - exfalso. pose proof (mult_pos_bigger (Z.pos p) b (Zgt_pos_0 p) bpos). lia.
-    - exfalso. pose proof (mult_neg_smaller (Z.neg p) b (Zlt_neg_0 p) bpos). lia.
+    - exfalso. pose proof (mult_pos_bigger (Z.pos p) b (Zgt_pos_0 p) bpos) as contra. lia.
+    - exfalso. pose proof (mult_neg_smaller (Z.neg p) b (Zlt_neg_0 p) bpos) as contra. lia.
 Qed.
 
 Theorem div_is_mod : forall (a b c : Z), c > 0 -> (a mod c = b mod c <-> (c | b - a)).
@@ -34,10 +34,10 @@ Proof.
       subst.
       pose proof (Z.div_eucl_eq a c nonzero) as decomp_a. rewrite <- divac in decomp_a.
       pose proof (Z.div_eucl_eq b c nonzero) as decomp_b. rewrite <- divbc in decomp_b.
-      subst.
+      rewrite decomp_a, decomp_b.
       exists (k - k').
       lia.
-    - unfold Z.modulo. destruct hyp.
+    - unfold Z.modulo. destruct hyp as [x c_div_bma].
       remember (Z.div_eucl a c) as tmp eqn:divac. destruct tmp as [k' r'].
       remember (Z.div_eucl b c) as tmp eqn:divbc. destruct tmp as [k r].
 
@@ -46,12 +46,12 @@ Proof.
       pose proof (Z_div_mod b c cpos) as decomp_b. 
       rewrite <- divbc in decomp_b. destruct decomp_b as [decomp_b rem_b].
 
-      rewrite decomp_a, decomp_b in H.
-      assert (c * (k - k' - x) = r' - r) as tmp by lia. clear H.
-      assert (-c < r' - r < c) by lia.
+      rewrite decomp_a, decomp_b in c_div_bma.
+      assert (c * (k - k' - x) = r' - r) as tmp by lia. clear c_div_bma.
+      assert (-c < r' - r < c) by lia. (* follows from rem_a and rem_b *)
       apply Z.sub_move_0_r.
       apply divides_smaller with c.
       assumption.
-      exists (k - k' - x). lia.
+      exists (k - k' - x). lia. (* almost same as tmp *)
       assumption.
 Qed.
