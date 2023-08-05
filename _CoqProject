@@ -1,0 +1,5 @@
+-Q theories Verith
+-arg -w -arg -notation-overridden
+
+theories/ZInduction.v
+theories/DivMod.v

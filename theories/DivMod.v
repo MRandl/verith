@@ -1,6 +1,6 @@
 From Coq Require Import ZArith.
 From Coq Require Import Lia. (* dieu merci que lia existe *)
-Require Import ZInduction.
+From Verith Require Import ZInduction.
 Open Scope Z.
 
 Lemma mult_pos_bigger : forall a b, a > 0 -> b > 0 -> a * b >= b.
