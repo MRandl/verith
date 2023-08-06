@@ -1,1 +1,9 @@
 .DS_Store
+*.cache
+*.vo
+*.vok
+*.vos
+*.glob
+*.aux
+Makefile.*
+.Makefile.*
