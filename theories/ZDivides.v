@@ -13,7 +13,7 @@ Proof.
     apply (Z_induction_two_N (fun a => forall b, a < 0 -> b > 0 -> - b >= a * b )); lia.
 Qed.
 
-Lemma divides_smaller : forall a b, b > 0 -> (b | a) -> (-b < a < b) -> a = 0.
+Theorem divides_smaller : forall a b, b > 0 -> (b | a) -> (-b < a < b) -> a = 0.
 Proof.
     intros a b bpos b_div_a a_bound.
     destruct b_div_a as [x x_div_a].

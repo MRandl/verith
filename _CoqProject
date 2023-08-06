@@ -2,4 +2,4 @@
 -arg -w -arg -notation-overridden
 
 theories/ZInduction.v
-theories/DivMod.v
+theories/ZDivides.v
