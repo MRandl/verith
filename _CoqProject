@@ -3,3 +3,5 @@
 
 theories/ZInduction.v
 theories/ZDivides.v
+theories/Cmod.v
+theories/Signed63.v
