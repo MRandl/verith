@@ -75,9 +75,9 @@ Qed.
 (* ( SInt63, + ) is associative, commutative, has a neutral element 
 and an inverse operation : it is an abelian group :) 
 
-can we push it to a field ? unfortunately, no. Multiplication in
-Z/nZ is invertible iff n is prime, which is not 
-the case of wB = 2 ^ (Z.of_nat size). But otherwise,  *)
+can we push it to a field ? unfortunately, no. Multiplication in Z/nZ is 
+invertible iff n is prime, which is not the case of wB = 2 ^ (Z.of_nat size). 
+As a consolation prize, we can still make ( SInt63, + ) a commutative ring. *)
 
 
 Theorem mul_comm : forall a b, a * b = b * a.
