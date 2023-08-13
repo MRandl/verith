@@ -24,3 +24,4 @@ git clone git@github.com:MRandl/verith
 cd verith
 make
 ```
+Note that this assumes coqc and coq-makefile to be accessible on PATH.
