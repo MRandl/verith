@@ -7,7 +7,8 @@ manipulations usually required by the certification of such
 programs.
 Verith is intended to be used in combination with the
 [extraction mechanism](https://coq.inria.fr/refman/addendum/extraction.html) 
-to help certifying programs in compiled languages.
+to help certifying programs in OCaml. It can also be used as is for regular
+Coq programs.
 
 It has no dependencies except than the Coq standard library
 and does not rely any axiom other than those provided by Coq itself.
