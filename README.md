@@ -10,8 +10,8 @@ Verith is intended to be used in combination with the
 to help certifying programs in OCaml. It can also be used as is for regular
 Coq programs.
 
-It has no dependencies except than the Coq standard library
-and does not rely any axiom other than those provided by Coq itself.
+It has no dependencies other than the Coq standard library
+and does not rely any axiom except for those provided by Coq itself.
 
 # License
 This library is licensed under the MIT License.
