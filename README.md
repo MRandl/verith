@@ -10,7 +10,7 @@ Verith is intended to be used in combination with the
 to help certifying programs in compiled languages.
 
 It has no dependencies except than the Coq standard library
-and uses no axiom other than those provided by Coq itself.
+and does not rely any axiom other than those provided by Coq itself.
 
 # License
 This library is licensed under the MIT License.
