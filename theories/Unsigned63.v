@@ -134,5 +134,3 @@ Qed.
 has a multiplication which is associative, distributes over addition 
 and has a neutral element. The multiplication also happens to be 
 commutative, therefore Uint63 forms a commutative ring! *)
-
-    
