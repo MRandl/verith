@@ -114,10 +114,3 @@ Proof.
     f_equal.
     lia.
 Qed.
-
-    
-    
-
-    
-    
-    
