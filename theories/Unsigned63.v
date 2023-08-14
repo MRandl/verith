@@ -130,9 +130,9 @@ Proof.
 Qed.
     
 
-(* Sint63 is an abelian group when associated with addition. It also 
+(* Uint63 is an abelian group when associated with addition. It also 
 has a multiplication which is associative, distributes over addition 
 and has a neutral element. The multiplication also happens to be 
-commutative, therefore Sint63 forms a commutative ring! *)
+commutative, therefore Uint63 forms a commutative ring! *)
 
     
