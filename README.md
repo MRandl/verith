@@ -12,7 +12,7 @@ Coq programs.
 
 It has no dependencies other than the Coq standard library.
 While it does not assume controversial axioms, it is up to the user to extract correctly 
-to guarantee correctness.
+to maintain the guarantees of the library.
 Most notably, the underlying implementation of native integers must respect all axioms
 of U/Sint63. This usually means that you should only extract U- and SInt63 objects towards 
 standard, native OCaml integers. You should also map their respective operations correctly.
