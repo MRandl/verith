@@ -11,7 +11,7 @@ to help certifying programs in OCaml. It can also be used as is for regular
 Coq programs.
 
 It has no dependencies other than the Coq standard library
-and does not rely any axiom except for those provided by Coq itself.
+and does not rely any axiom that is not taken for granted in day-to-day Coq.
 
 # License
 This library is licensed under the MIT License.
