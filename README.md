@@ -10,12 +10,12 @@ Verith is intended to be used in combination with the
 to help certifying programs in OCaml. It can also be used as is for regular
 Coq programs.
 
-It has no dependencies other than the Coq standard library
-and does not rely any axiom that is not taken for granted by your
-average Coq user. It is up to the user to extract correctly, however!
+It has no dependencies other than the Coq standard library.
+While it does not assume constroversial axioms, it is up to the user to extract correctly 
+to guarantee correctness.
 Most notably, the underlying implementation of native integers must respect all axioms
-of U/Sint63. This usually means that you should only extract towards standard, native 
-OCaml integers.
+of U/Sint63. This usually means that you should only extract U- and SInt63 objects towards 
+standard, native OCaml integers. You should also map their respective operations correctly.
 
 # License
 This library is licensed under the MIT License.
