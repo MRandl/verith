@@ -12,7 +12,10 @@ Coq programs.
 
 It has no dependencies other than the Coq standard library
 and does not rely any axiom that is not taken for granted by your
-average Coq user.
+average Coq user. It is up to the user to extract correctly, however!
+Most notably, the underlying implementation of native integers must respect all axioms
+of U/Sint63. This usually means that you should only extract towards standard, native 
+OCaml integers.
 
 # License
 This library is licensed under the MIT License.
