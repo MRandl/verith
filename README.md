@@ -1,6 +1,6 @@
 # Verith
 Verith (VERIfied aRITHmetic) is a Coq library that proves 
-several results about native-integer arithmetic. It enables 
+several results about arithmetic on native integers. It enables 
 users to write safe programs that make use of native integers
 without dealing with the complex, ceremonial and low-level 
 manipulations usually required by the certification of such
