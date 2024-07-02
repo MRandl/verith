@@ -15,11 +15,11 @@ While it does not assume controversial axioms, it is up to the user to extract c
 to maintain the guarantees of the library.
 Most notably, the underlying implementation of native integers must respect all axioms
 of U/Sint63. This usually means that you should only extract U- and SInt63 objects towards 
-standard, native OCaml integers. You should also map their respective operations correctly.
+standard OCaml integers. You should also map their respective operations correctly.
 
 # License
 This library is licensed under the MIT License.
-See [the license](LICENSE) for more details.
+See the [license](LICENSE) for more details.
 The license takes precedence over any comment and/or description
 provided in this project.
 
